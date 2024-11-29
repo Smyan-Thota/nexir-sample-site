@@ -1,48 +1,51 @@
 import { motion } from "framer-motion";
 import ParticleBackground from "../components/ParticleBackground";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Brain, Cpu, Network } from "lucide-react";
+import { Brain, Cpu, Network, TrendingUp, Users, LineChart } from "lucide-react";
+import HeroCarousel from "../components/HeroCarousel";
 
 const Home = () => {
   return (
     <>
       <ParticleBackground />
       
-      {/* Hero Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="relative h-[80vh] flex items-center"
-        style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1535378917042-10a22c95931a)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gray-900/70" />
-        <div className="container relative z-10">
-          <motion.div
+      {/* Hero Carousel */}
+      <HeroCarousel />
+
+      {/* AI Industry Statistics */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="max-w-2xl"
+            className="text-3xl font-bold text-center mb-12"
           >
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Transforming Business Through AI Innovation
-            </h1>
-            <p className="text-xl text-gray-200 mb-8">
-              Leverage cutting-edge artificial intelligence solutions to drive your business forward.
-            </p>
-            <Button className="bg-[#FF7F50] hover:bg-[#FF6B3D] text-white">
-              Explore Solutions <ArrowRight className="ml-2" />
-            </Button>
-          </motion.div>
+            AI Industry Growth
+          </motion.h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {statistics.map((stat, index) => (
+              <motion.div
+                key={stat.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Card className="text-center">
+                  <CardContent className="p-6">
+                    <stat.icon className="w-12 h-12 text-[#FF7F50] mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold mb-2">{stat.value}</h3>
+                    <p className="text-gray-600">{stat.title}</p>
+                    <p className="text-sm text-gray-500 mt-2">{stat.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-12">Our AI Solutions</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -68,6 +71,27 @@ const Home = () => {
     </>
   );
 };
+
+const statistics = [
+  {
+    title: "Market Size Growth",
+    value: "$1.3T",
+    description: "Projected global AI market size by 2029",
+    icon: TrendingUp,
+  },
+  {
+    title: "AI Adoption Rate",
+    value: "35%",
+    description: "Companies implementing AI solutions in 2024",
+    icon: Users,
+  },
+  {
+    title: "Annual Growth Rate",
+    value: "27.3%",
+    description: "Compound Annual Growth Rate (CAGR)",
+    icon: LineChart,
+  },
+];
 
 const features = [
   {
