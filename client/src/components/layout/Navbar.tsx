@@ -22,7 +22,11 @@ const Navbar = () => {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/">
           <div className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-gray-800">NEXIR<span className="text-[#FF7F50]">AI</span></span>
+            <img 
+              src="/Logo2.png" 
+              alt="NEXIRAI" 
+              className="h-8 w-auto transition-transform hover:scale-105"
+            />
           </div>
         </Link>
 
