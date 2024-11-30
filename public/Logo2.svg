@@ -1,0 +1,6 @@
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { fill: #FF7F50; font-family: 'Inter', sans-serif; font-weight: bold; }
+  </style>
+  <text x="10" y="28" class="logo-text" font-size="24">NEXIRAI</text>
+</svg>
