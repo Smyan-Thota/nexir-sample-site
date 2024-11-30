@@ -74,39 +74,39 @@ const Home = () => {
 
 const statistics = [
   {
-    title: "Market Size Growth",
-    value: "$1.3T",
-    description: "Projected global AI market size by 2029",
+    title: "Financial Inclusion",
+    value: "100%",
+    description: "Commitment to accessible financial services",
     icon: TrendingUp,
   },
   {
-    title: "AI Adoption Rate",
-    value: "35%",
-    description: "Companies implementing AI solutions in 2024",
+    title: "Energy Savings",
+    value: "40%",
+    description: "Average reduction in energy costs with our ML-powered solutions",
     icon: Users,
   },
   {
-    title: "Annual Growth Rate",
-    value: "27.3%",
-    description: "Compound Annual Growth Rate (CAGR)",
+    title: "Digital Transformation",
+    value: "24/7",
+    description: "Round-the-clock automated business processes",
     icon: LineChart,
   },
 ];
 
 const features = [
   {
-    title: "Machine Learning",
-    description: "Custom ML solutions tailored to your business needs",
+    title: "FinTech Solutions",
+    description: "AI-enabled financial services and inclusion platforms",
     icon: Brain,
   },
   {
-    title: "Neural Networks",
-    description: "Advanced pattern recognition and prediction systems",
+    title: "Digital Transformation",
+    description: "Comprehensive digital solutions and analytics",
     icon: Network,
   },
   {
-    title: "AI Integration",
-    description: "Seamless integration of AI into existing workflows",
+    title: "Smart Applications",
+    description: "Micro ERP and IoT applications for business efficiency",
     icon: Cpu,
   },
 ];

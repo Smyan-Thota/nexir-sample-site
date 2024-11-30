@@ -5,22 +5,22 @@ import { Link } from "wouter";
 
 const slides = [
   {
-    title: "Transforming Business Through AI Innovation",
-    description: "Leverage cutting-edge artificial intelligence solutions to drive your business forward.",
+    title: "AI-enabled FinTech & Financial Inclusion",
+    description: "Empowering businesses with AI-driven financial services, alternative credit scoring, and inclusive financial solutions.",
     ctaText: "Explore Solutions",
     ctaLink: "/services",
     backgroundImage: "https://images.unsplash.com/photo-1535378917042-10a22c95931a",
   },
   {
-    title: "AI Market Growth & Potential",
-    description: "The global AI market size is projected to grow from $387.45 billion in 2024 to over $1.3 trillion by 2029, representing a CAGR of 27.3%.",
+    title: "Digital Transformation & Analytics",
+    description: "Transform your business with cutting-edge digital solutions and advanced analytics for strategic decision-making.",
     ctaText: "Learn More",
     ctaLink: "/services",
     backgroundImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
   },
   {
-    title: "Innovative AI Solutions",
-    description: "From machine learning to natural language processing, we offer comprehensive AI solutions tailored to your needs.",
+    title: "Smart Solutions for Modern Business",
+    description: "From Micro ERP applications to IoT solutions, we provide intelligent systems that drive business excellence.",
     ctaText: "View Services",
     ctaLink: "/services",
     backgroundImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485",
