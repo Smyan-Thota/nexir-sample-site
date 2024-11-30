@@ -20,31 +20,32 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/">
-          <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center">
             <img 
               src="/Logo2.png" 
               alt="NEXIRAI" 
               className="h-8 w-auto transition-transform hover:scale-105"
             />
-          </div>
-        </Link>
+          </Link>
+        </div>
 
         <NavigationMenu>
           <NavigationMenuList className="hidden md:flex space-x-4">
             {navItems.map((item) => (
               <NavigationMenuItem key={item.href}>
-                <Link href={item.href}>
-                  <Button
-                    variant={location === item.href ? "default" : "ghost"}
-                    className={cn(
-                      "text-sm font-medium transition-colors",
-                      location === item.href ? "bg-[#FF7F50] text-white" : "text-gray-700"
-                    )}
-                  >
+                <Button
+                  variant={location === item.href ? "default" : "ghost"}
+                  className={cn(
+                    "text-sm font-medium transition-colors",
+                    location === item.href ? "bg-[#FF7F50] text-white" : "text-gray-700"
+                  )}
+                  asChild
+                >
+                  <Link href={item.href}>
                     {item.label}
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
