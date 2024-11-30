@@ -9,8 +9,8 @@ export const fadeIn: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
-      ease: "easeOut"
+      duration: 0.8,
+      ease: [0.6, 0.05, -0.01, 0.9]
     }
   }
 };
@@ -25,8 +25,9 @@ export const slideUp: Variants = {
     opacity: 1,
     transition: {
       type: "spring",
-      damping: 25,
-      stiffness: 100
+      damping: 30,
+      stiffness: 200,
+      duration: 0.8
     }
   }
 };
@@ -36,45 +37,96 @@ export const staggerContainer: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
+      staggerChildren: 0.1,
+      delayChildren: 0.2
     }
   }
 };
 
 export const scaleIn: Variants = {
   hidden: { 
-    scale: 0.8,
+    scale: 0.9,
     opacity: 0 
   },
   visible: { 
     scale: 1,
     opacity: 1,
     transition: {
-      duration: 0.5,
-      ease: "easeOut"
+      type: "spring",
+      damping: 30,
+      stiffness: 200
+    }
+  }
+};
+
+export const cardHover: Variants = {
+  rest: {
+    scale: 1,
+    y: 0
+  },
+  hover: {
+    scale: 1.02,
+    y: -5,
+    transition: {
+      type: "spring",
+      damping: 30,
+      stiffness: 200
+    }
+  }
+};
+
+export const buttonHover: Variants = {
+  rest: {
+    scale: 1
+  },
+  hover: {
+    scale: 1.05,
+    transition: {
+      type: "spring",
+      damping: 10,
+      stiffness: 200
+    }
+  },
+  tap: {
+    scale: 0.95
+  }
+};
+
+export const parallaxScroll: Variants = {
+  hidden: {
+    y: 100,
+    opacity: 0
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      damping: 20,
+      stiffness: 100
     }
   }
 };
 
 export const pageTransition: Variants = {
-  hidden: {
+  initial: {
     opacity: 0,
-    x: -200
+    y: 20
   },
-  visible: {
+  animate: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
-      duration: 0.5,
-      ease: "easeInOut"
+      duration: 0.6,
+      ease: [0.6, 0.05, -0.01, 0.9]
     }
   },
   exit: {
     opacity: 0,
-    x: 200,
+    y: -20,
     transition: {
-      duration: 0.5,
-      ease: "easeInOut"
+      duration: 0.6,
+      ease: [0.6, 0.05, -0.01, 0.9]
     }
   }
 };
