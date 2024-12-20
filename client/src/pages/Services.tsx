@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Brain, Database, BarChart, Lock, MessageSquare, Zap } from "lucide-react";
+import { Brain, Database, BarChart, Lock, MessageSquare, Zap, Building2, CreditCard } from "lucide-react";
 
 const Services = () => {
   return (
@@ -106,6 +106,18 @@ const Services = () => {
 };
 
 const services = [
+  {
+    title: "Fintech Solutions",
+    description: "In rural regions, individuals facing challenges in accessing banking services often encounter issues such as high travel costs and extensive wait times. Our FI Solution enables branchless banking directly at clients' doorsteps, operating seamlessly across devices including Mobiles, Tablets, and POS Terminals. Through strategic partnerships, we ensure enhanced reach and accessibility of essential financial services to marginalized communities.",
+    icon: CreditCard,
+    technologies: ["Mobile Banking", "POS Integration", "Financial Inclusion", "Branchless Banking"],
+  },
+  {
+    title: "Micro-ERP Solutions",
+    description: "Empowering SMEs with agile and scalable modules, our Micro-ERP solution focuses on providing essential features without unnecessary complexity. Through our collaboration with AIFACET, we incorporate simplicity and practicality into enterprise solutions, ensuring SMEs can optimize their workflows and manage resources effectively while focusing on core business operations.",
+    icon: Building2,
+    technologies: ["Workflow Optimization", "Resource Management", "SME-focused", "Cloud-based"],
+  },
   {
     title: "Machine Learning Solutions",
     description: "Custom ML models tailored to your specific business needs",
