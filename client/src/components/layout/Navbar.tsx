@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-2">
           <Link href="/">
             <img 
-              src="/Logo2.png"
+              src="Logo2.png"
               alt="NEXIRAI"
               width={120}
               height={40}
