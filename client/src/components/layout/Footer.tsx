@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">NEXIR<span className="text-[#FF7F50]">AI</span></h3>
+            <h3 className="text-xl font-bold mb-4">NEXIR<span className="text-[#FF7F50]">AI</span> TECHNOLOGIES PVT LTD</h3>
             <p className="text-sm">
               Transforming businesses through innovative AI solutions.
             </p>
@@ -40,20 +40,19 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* India Office */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4">India Office</h4>
             <ul className="space-y-2">
-              <li>Machine Learning</li>
-              <li>Data Analytics</li>
-              <li>AI Infrastructure</li>
-              <li>Custom Solutions</li>
+              <li>Hyderabad, Telangana</li>
+              <li>+91-9676879459</li>
+              <li>venu.thota@nexirai.com</li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* USA Office */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4">USA Office</h4>
             <ul className="space-y-2">
               <li>Cleveland, OH</li>
               <li>+1 (216) 301-9280</li>
@@ -63,7 +62,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} NexirAI. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} NexirAI Technologies Pvt Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>

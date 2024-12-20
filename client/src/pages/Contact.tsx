@@ -37,7 +37,6 @@ const Contact = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      // In a real application, you would send this data to your backend
       console.log(values);
       toast({
         title: "Message sent!",
@@ -67,7 +66,7 @@ const Contact = () => {
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl font-bold text-center mb-12">Contact Us</h1>
-          
+
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
             <motion.div
@@ -75,27 +74,60 @@ const Contact = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <Mail className="text-[#FF7F50]" />
-                  <div>
-                    <h3 className="font-medium">Email</h3>
-                    <p className="text-gray-600">smyan@nexirai.com</p>
+              <h2 className="text-2xl font-semibold mb-6">Our Offices</h2>
+
+              {/* India Office */}
+              <div className="mb-8">
+                <h3 className="text-xl font-medium mb-4">India Office</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-4">
+                    <MapPin className="text-[#FF7F50]" />
+                    <div>
+                      <h4 className="font-medium">NEXIRAI TECHNOLOGIES PVT LTD</h4>
+                      <p className="text-gray-600">Hyderabad, Telangana</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <Phone className="text-[#FF7F50]" />
+                    <div>
+                      <h4 className="font-medium">Phone</h4>
+                      <p className="text-gray-600">+91-9676879459</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <Mail className="text-[#FF7F50]" />
+                    <div>
+                      <h4 className="font-medium">Email</h4>
+                      <p className="text-gray-600">venu.thota@nexirai.com</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <Phone className="text-[#FF7F50]" />
-                  <div>
-                    <h3 className="font-medium">Phone</h3>
-                    <p className="text-gray-600">+1 (216) 301-9280</p>
+              </div>
+
+              {/* USA Office */}
+              <div>
+                <h3 className="text-xl font-medium mb-4">USA Office</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-4">
+                    <MapPin className="text-[#FF7F50]" />
+                    <div>
+                      <h4 className="font-medium">Address</h4>
+                      <p className="text-gray-600">Cleveland, OH</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <MapPin className="text-[#FF7F50]" />
-                  <div>
-                    <h3 className="font-medium">Address</h3>
-                    <p className="text-gray-600">Cleveland, OH</p>
+                  <div className="flex items-center space-x-4">
+                    <Phone className="text-[#FF7F50]" />
+                    <div>
+                      <h4 className="font-medium">Phone</h4>
+                      <p className="text-gray-600">+1 (216) 301-9280</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <Mail className="text-[#FF7F50]" />
+                    <div>
+                      <h4 className="font-medium">Email</h4>
+                      <p className="text-gray-600">smyan@nexirai.com</p>
+                    </div>
                   </div>
                 </div>
               </div>
