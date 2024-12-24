@@ -14,6 +14,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import AIML from "./pages/technologies/ai-ml";
 import DigitalTransformation from "./pages/technologies/digital-transformation";
+import Analytics from "./pages/technologies/analytics";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
@@ -30,6 +31,7 @@ function Router() {
             <Route path="/contact" component={Contact} />
             <Route path="/technologies/ai-ml" component={AIML} />
             <Route path="/technologies/digital-transformation" component={DigitalTransformation} />
+            <Route path="/technologies/analytics" component={Analytics} />
             <Route>404 Page Not Found</Route>
           </Switch>
         </AnimatePresence>
