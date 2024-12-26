@@ -77,14 +77,14 @@ const Contact = () => {
             >
               <h2 className="text-2xl font-semibold mb-2">Our Offices</h2>
 
-              <div className="space-y-1">
+              <div className="space-y-2">
                 {/* Company Name */}
                 <h4 className="font-medium">NEXIRAI TECHNOLOGIES PVT LTD</h4>
 
                 {/* India Office */}
                 <div className="mt-2">
                   <h3 className="text-xl font-medium mb-1">India Office</h3>
-                  <div className="space-y-1">
+                  <div className="space-y-2">
                     <div className="flex items-center space-x-2">
                       <MapPin className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">Hyderabad, Telangana</p>
@@ -103,7 +103,7 @@ const Contact = () => {
                 {/* USA Office */}
                 <div className="mt-3">
                   <h3 className="text-xl font-medium mb-1">USA Office</h3>
-                  <div className="space-y-1">
+                  <div className="space-y-2">
                     <div className="flex items-center space-x-2">
                       <MapPin className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">Cleveland, OH</p>
