@@ -73,11 +73,12 @@ const Contact = () => {
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
+              className="space-y-8 self-start"
             >
               <h2 className="text-2xl font-semibold mb-6">Our Offices</h2>
 
               {/* India Office */}
-              <div className="mb-8">
+              <div>
                 <h3 className="text-xl font-medium mb-4">India Office</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
@@ -197,12 +198,14 @@ const Contact = () => {
                       </FormItem>
                     )}
                   />
-                  <Button
-                    type="submit"
-                    className="w-full bg-[#FF7F50] hover:bg-[#FF6B3D]"
-                  >
-                    Send Message
-                  </Button>
+                  <div className="pt-4">
+                    <Button
+                      type="submit"
+                      className="w-full bg-[#FF7F50] hover:bg-[#FF6B3D]"
+                    >
+                      Send Message
+                    </Button>
+                  </div>
                 </form>
               </Form>
             </motion.div>
