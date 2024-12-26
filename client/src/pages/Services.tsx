@@ -63,42 +63,6 @@ const Services = () => {
             </motion.div>
           ))}
         </div>
-        {/* Case Studies */}
-        <section className="mt-20">
-          <h2 className="text-3xl font-bold text-center mb-12">Case Studies</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1584291527935-456e8e2dd734"
-                alt="Data Visualization"
-                className="rounded-lg shadow-lg mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2">Financial Analysis AI</h3>
-              <p className="text-gray-600">
-                How we helped a leading financial institution automate their data analysis process.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1640622842008-1897f26aafe3"
-                alt="Modern Office Tech"
-                className="rounded-lg shadow-lg mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2">Smart Office Solutions</h3>
-              <p className="text-gray-600">
-                Implementing AI-powered workplace optimization for enhanced productivity.
-              </p>
-            </motion.div>
-          </div>
-        </section>
       </div>
     </motion.div>
   );
