@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Brain, Database, BarChart, Lock, MessageSquare, Zap, Building2, CreditCard } from "lucide-react";
+import { Building2, CreditCard, Zap } from "lucide-react";
 
 const Services = () => {
   return (
@@ -19,20 +19,20 @@ const Services = () => {
             animate={{ y: 0, opacity: 1 }}
             className="text-4xl font-bold mb-6"
           >
-            Our AI Solutions
+            Our Core Solutions
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Discover how our AI-powered solutions can transform your business
+            Empowering businesses with innovative solutions across Financial Technology, Enterprise Management, and Energy Systems
           </motion.p>
         </section>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -40,21 +40,21 @@ const Services = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card>
+              <Card className="h-full">
                 <CardHeader>
-                  <service.icon className="w-10 h-10 text-[#FF7F50] mb-4" />
+                  <service.icon className="w-12 h-12 text-[#FF7F50] mb-4" />
                   <CardTitle className="text-2xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {service.technologies.map((tech) => (
+                    {service.features.map((feature) => (
                       <Badge
-                        key={tech}
+                        key={feature}
                         variant="secondary"
                         className="bg-gray-100"
                       >
-                        {tech}
+                        {feature}
                       </Badge>
                     ))}
                   </div>
@@ -63,7 +63,6 @@ const Services = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Case Studies */}
         <section className="mt-20">
           <h2 className="text-3xl font-bold text-center mb-12">Case Studies</h2>
@@ -108,39 +107,21 @@ const Services = () => {
 const services = [
   {
     title: "Fintech Solutions",
-    description: "In rural regions, individuals facing challenges in accessing banking services often encounter issues such as high travel costs and extensive wait times. Our FI Solution enables branchless banking directly at clients' doorsteps, operating seamlessly across devices including Mobiles, Tablets, and POS Terminals. Through strategic partnerships, we ensure enhanced reach and accessibility of essential financial services to marginalized communities.",
+    description: "In rural regions, individuals facing challenges in accessing banking services, particularly the underprivileged, often encounter issues such as high travel costs and extensive wait times in queues. Our FI Solution is expertly crafted to seamlessly operate across a diverse range of devices including Mobiles, Tablets, and POS Terminals, accommodating various Platforms and networks. NexirAI will be instrumental as a banking correspondent, acting as an extended arm to the banks for the provision of their banking services. This strategic partnership ensures enhanced reach and accessibility of essential financial services to marginalized communities, bolstering financial inclusion efforts.",
     icon: CreditCard,
-    technologies: ["Mobile Banking", "POS Integration", "Financial Inclusion", "Branchless Banking"],
+    features: ["Mobile Banking", "POS Integration", "Financial Inclusion", "Branchless Banking", "Enterprise-grade Scalability"],
   },
   {
     title: "Micro-ERP Solutions",
-    description: "Empowering SMEs with agile and scalable modules, our Micro-ERP solution focuses on providing essential features without unnecessary complexity. Through our collaboration with AIFACET, we incorporate simplicity and practicality into enterprise solutions, ensuring SMEs can optimize their workflows and manage resources effectively while focusing on core business operations.",
+    description: "Empowering SMEs with agile and scalable modules, our Micro-ERP solution focuses on providing essential features without unnecessary complexity. Through our innovative approach, we incorporate simplicity and practicality into enterprise solutions, ensuring SMEs can optimize their workflows and manage resources effectively. NexirAI's Micro-ERP platform streamlines operations across finance, inventory, and human resources, enabling businesses to focus on growth while maintaining operational excellence. Our solution adapts to various industry needs while ensuring cost-effectiveness and ease of implementation.",
     icon: Building2,
-    technologies: ["Workflow Optimization", "Resource Management", "SME-focused", "Cloud-based"],
+    features: ["Workflow Optimization", "Resource Management", "SME-focused", "Cloud-based", "Integrated Analytics"],
   },
   {
-    title: "Machine Learning Solutions",
-    description: "Custom ML models tailored to your specific business needs",
-    icon: Brain,
-    technologies: ["TensorFlow", "PyTorch", "Scikit-learn"],
-  },
-  {
-    title: "Data Analytics",
-    description: "Advanced analytics and visualization platforms",
-    icon: BarChart,
-    technologies: ["Big Data", "Predictive Analytics", "Real-time Processing"],
-  },
-  {
-    title: "Natural Language Processing",
-    description: "Text analysis and chatbot development",
-    icon: MessageSquare,
-    technologies: ["BERT", "GPT", "Custom Models"],
-  },
-  {
-    title: "AI Infrastructure",
-    description: "Scalable and secure AI deployment solutions",
-    icon: Database,
-    technologies: ["Cloud Computing", "Edge AI", "MLOps"],
+    title: "Energy Management Solutions",
+    description: "Our comprehensive Energy Management System revolutionizes how organizations monitor, control, and optimize their energy consumption. NexirAI's partner solutions leverage advanced IoT sensors and real-time analytics to provide actionable insights for energy efficiency. By combining cutting-edge technology with practical implementation, we help businesses reduce operational costs, meet sustainability goals, and maintain regulatory compliance. Our system adapts to various facility types and scales, ensuring optimal energy utilization across different operational scenarios.",
+    icon: Zap,
+    features: ["Real-time Monitoring", "Smart Analytics", "Sustainability", "Cost Optimization", "IoT Integration"],
   },
 ];
 
