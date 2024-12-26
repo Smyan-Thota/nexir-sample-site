@@ -73,60 +73,47 @@ const Contact = () => {
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="space-y-8 self-start"
+              className="space-y-3"
             >
-              <h2 className="text-2xl font-semibold mb-6">Our Offices</h2>
+              <h2 className="text-2xl font-semibold mb-2">Our Offices</h2>
 
-              {/* India Office */}
-              <div>
-                <h3 className="text-xl font-medium mb-4">India Office</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <MapPin className="text-[#FF7F50]" />
-                    <div>
-                      <h4 className="font-medium">NEXIRAI TECHNOLOGIES PVT LTD</h4>
+              <div className="space-y-1">
+                {/* Company Name */}
+                <h4 className="font-medium">NEXIRAI TECHNOLOGIES PVT LTD</h4>
+
+                {/* India Office */}
+                <div className="mt-2">
+                  <h3 className="text-xl font-medium mb-1">India Office</h3>
+                  <div className="space-y-1">
+                    <div className="flex items-center space-x-2">
+                      <MapPin className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">Hyderabad, Telangana</p>
                     </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <Phone className="text-[#FF7F50]" />
-                    <div>
-                      <h4 className="font-medium">Phone</h4>
+                    <div className="flex items-center space-x-2">
+                      <Phone className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">+91-9676879459</p>
                     </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <Mail className="text-[#FF7F50]" />
-                    <div>
-                      <h4 className="font-medium">Email</h4>
+                    <div className="flex items-center space-x-2">
+                      <Mail className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">venu.thota@nexirai.com</p>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* USA Office */}
-              <div>
-                <h3 className="text-xl font-medium mb-4">USA Office</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <MapPin className="text-[#FF7F50]" />
-                    <div>
-                      <h4 className="font-medium">Address</h4>
+                {/* USA Office */}
+                <div className="mt-3">
+                  <h3 className="text-xl font-medium mb-1">USA Office</h3>
+                  <div className="space-y-1">
+                    <div className="flex items-center space-x-2">
+                      <MapPin className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">Cleveland, OH</p>
                     </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <Phone className="text-[#FF7F50]" />
-                    <div>
-                      <h4 className="font-medium">Phone</h4>
+                    <div className="flex items-center space-x-2">
+                      <Phone className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">+1 (216) 301-9280</p>
                     </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <Mail className="text-[#FF7F50]" />
-                    <div>
-                      <h4 className="font-medium">Email</h4>
+                    <div className="flex items-center space-x-2">
+                      <Mail className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">smyan@nexirai.com</p>
                     </div>
                   </div>
@@ -141,7 +128,7 @@ const Contact = () => {
               transition={{ delay: 0.3 }}
             >
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                   <FormField
                     control={form.control}
                     name="name"
