@@ -23,6 +23,31 @@ const formSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
+// Animation variants
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
 const Contact = () => {
   const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
@@ -61,139 +86,188 @@ const Contact = () => {
     >
       <div className="container">
         <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl font-bold text-center mb-12">Contact Us</h1>
+          <motion.h1 
+            variants={itemVariants}
+            className="text-4xl font-bold text-center mb-12"
+          >
+            Contact Us
+          </motion.h1>
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
             <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
               className="space-y-3"
             >
-              <h2 className="text-2xl font-semibold mb-2">Our Offices</h2>
+              <motion.h2 
+                variants={itemVariants}
+                className="text-2xl font-semibold mb-2"
+              >
+                Our Offices
+              </motion.h2>
 
-              <div className="space-y-2">
+              <motion.div 
+                variants={containerVariants}
+                className="space-y-2"
+              >
                 {/* Company Name */}
-                <h4 className="font-medium">NEXIRAI TECHNOLOGIES PVT LTD</h4>
+                <motion.h4 
+                  variants={itemVariants}
+                  className="font-medium"
+                >
+                  NEXIRAI TECHNOLOGIES PVT LTD
+                </motion.h4>
 
                 {/* India Office */}
-                <div className="mt-2">
-                  <h3 className="text-xl font-medium mb-1">India Office</h3>
-                  <div className="space-y-2">
-                    <div className="flex items-center space-x-2">
+                <motion.div
+                  variants={containerVariants}
+                  className="mt-2"
+                >
+                  <motion.h3 
+                    variants={itemVariants}
+                    className="text-xl font-medium mb-1"
+                  >
+                    India Office
+                  </motion.h3>
+                  <motion.div
+                    variants={containerVariants}
+                    className="space-y-2"
+                  >
+                    <motion.div variants={itemVariants} className="flex items-center space-x-2">
                       <MapPin className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">Hyderabad, Telangana</p>
-                    </div>
-                    <div className="flex items-center space-x-2">
+                    </motion.div>
+                    <motion.div variants={itemVariants} className="flex items-center space-x-2">
                       <Phone className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">+91-9676879459</p>
-                    </div>
-                    <div className="flex items-center space-x-2">
+                    </motion.div>
+                    <motion.div variants={itemVariants} className="flex items-center space-x-2">
                       <Mail className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">venu.thota@nexirai.com</p>
-                    </div>
-                  </div>
-                </div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
 
                 {/* USA Office */}
-                <div className="mt-6">
-                  <h3 className="text-xl font-medium mb-1">USA Office</h3>
-                  <div className="space-y-2">
-                    <div className="flex items-center space-x-2">
+                <motion.div
+                  variants={containerVariants}
+                  className="mt-6"
+                >
+                  <motion.h3 
+                    variants={itemVariants}
+                    className="text-xl font-medium mb-1"
+                  >
+                    USA Office
+                  </motion.h3>
+                  <motion.div
+                    variants={containerVariants}
+                    className="space-y-2"
+                  >
+                    <motion.div variants={itemVariants} className="flex items-center space-x-2">
                       <MapPin className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">Cleveland, OH</p>
-                    </div>
-                    <div className="flex items-center space-x-2">
+                    </motion.div>
+                    <motion.div variants={itemVariants} className="flex items-center space-x-2">
                       <Phone className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">+1 (216) 301-9280</p>
-                    </div>
-                    <div className="flex items-center space-x-2">
+                    </motion.div>
+                    <motion.div variants={itemVariants} className="flex items-center space-x-2">
                       <Mail className="text-[#FF7F50] w-4 h-4" />
                       <p className="text-gray-600">smyan@nexirai.com</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
             </motion.div>
 
             {/* Contact Form */}
             <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.3 }}
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
               className="pt-12 pl-8"
             >
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Your name" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input placeholder="your@email.com" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="subject"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Subject</FormLabel>
-                        <FormControl>
-                          <Input placeholder="What's this about?" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message</FormLabel>
-                        <FormControl>
-                          <Textarea
-                            placeholder="Your message..."
-                            className="min-h-[150px]"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <div className="pt-4">
+                  <motion.div variants={itemVariants}>
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Your name" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </motion.div>
+                  <motion.div variants={itemVariants}>
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email</FormLabel>
+                          <FormControl>
+                            <Input placeholder="your@email.com" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </motion.div>
+                  <motion.div variants={itemVariants}>
+                    <FormField
+                      control={form.control}
+                      name="subject"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Subject</FormLabel>
+                          <FormControl>
+                            <Input placeholder="What's this about?" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </motion.div>
+                  <motion.div variants={itemVariants}>
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Message</FormLabel>
+                          <FormControl>
+                            <Textarea
+                              placeholder="Your message..."
+                              className="min-h-[150px]"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </motion.div>
+                  <motion.div variants={itemVariants} className="pt-4">
                     <Button
                       type="submit"
                       className="w-full bg-[#FF7F50] hover:bg-[#FF6B3D]"
                     >
                       Send Message
                     </Button>
-                  </div>
+                  </motion.div>
                 </form>
               </Form>
             </motion.div>
