@@ -4,14 +4,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Brain,
-  Cpu,
   Network,
-  TrendingUp,
-  Users,
-  LineChart,
+  BarChart,
+  Cpu,
   ArrowRight,
   Building2,
-  Newspaper,
+  CreditCard,
+  Zap,
 } from "lucide-react";
 
 const Home = () => {
@@ -78,28 +77,25 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Customer Showcase */}
+      {/* Core Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="container">
           <h2 className="text-4xl font-bold text-center mb-16">
-            Trusted by Industry Leaders
+            Our Core Services
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {coreServices.map((service, index) => (
               <motion.div
-                key={testimonial.author}
+                key={service.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
                 <Card className="h-full">
                   <CardContent className="p-6">
-                    <Building2 className="w-8 h-8 text-[#FF7F50] mb-4" />
-                    <p className="text-gray-600 italic mb-4">"{testimonial.quote}"</p>
-                    <div>
-                      <p className="font-semibold">{testimonial.author}</p>
-                      <p className="text-sm text-gray-500">{testimonial.role}</p>
-                    </div>
+                    <service.icon className="w-8 h-8 text-[#FF7F50] mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -108,31 +104,22 @@ const Home = () => {
         </div>
       </section>
 
-      {/* News & Updates */}
+      {/* About Section */}
       <section className="py-20">
         <div className="container">
-          <h2 className="text-4xl font-bold text-center mb-16">Latest Updates</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {news.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="h-full">
-                  <CardContent className="p-6">
-                    <Newspaper className="w-8 h-8 text-[#FF7F50] mb-4" />
-                    <p className="text-sm text-[#FF7F50] mb-2">{item.category}</p>
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-gray-600 mb-4">{item.description}</p>
-                    <Link href={item.link} className="text-[#FF7F50] hover:text-[#FF6B3D] font-medium inline-flex items-center">
-                      Read more <ArrowRight className="ml-1 w-4 h-4" />
-                    </Link>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-8">About NexirAI</h2>
+            <p className="text-lg text-gray-600 mb-8">
+              NexirAI is a cutting-edge technology consulting platform delivering advanced digital solutions for global enterprises. With a focused approach to transformative technological services, we specialize in Fintech, Micro-ERP, and Partner Solutions for Energy Management.
+            </p>
+            <Button
+              className="bg-[#FF7F50] hover:bg-[#FF6B3D] text-white"
+              asChild
+            >
+              <Link href="/about">
+                Learn More About Us <ArrowRight className="ml-2" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -142,67 +129,46 @@ const Home = () => {
 
 const solutions = [
   {
-    title: "AI-enabled FinTech",
-    description: "Empower your business with AI-driven financial services and alternative credit scoring solutions.",
+    title: "AI/ML Solutions",
+    description: "Empowering businesses with intelligent insights and strategic foresight through advanced Artificial Intelligence and Machine Learning capabilities.",
     icon: Brain,
-    link: "/services#fintech",
+    link: "/technologies/ai-ml",
   },
   {
     title: "Digital Transformation",
-    description: "Transform your business with cutting-edge digital solutions and advanced analytics.",
+    description: "Transform your business with cutting-edge digital solutions that streamline operations and enhance user experiences across diverse digital touch points.",
     icon: Network,
-    link: "/services#digital",
+    link: "/technologies/digital-transformation",
   },
   {
-    title: "Smart Micro ERP",
-    description: "Streamline operations with intelligent ERP applications designed for modern businesses.",
-    icon: Cpu,
-    link: "/services#erp",
+    title: "Advanced Analytics",
+    description: "Leverage data-driven insights for informed decision-making and strategic planning with our comprehensive analytics solutions.",
+    icon: BarChart,
+    link: "/technologies/analytics",
   },
   {
     title: "IoT Applications",
-    description: "Harness the power of IoT for enhanced efficiency and automation.",
-    icon: TrendingUp,
-    link: "/services#iot",
+    description: "Connect and optimize your operations with intelligent IoT solutions that enable smart decision-making and operational excellence.",
+    icon: Cpu,
+    link: "/technologies/iot",
   },
 ];
 
-const testimonials = [
+const coreServices = [
   {
-    quote: "NEXIRAI's AI-enabled solutions have transformed our financial operations, making them more efficient and accessible.",
-    author: "John Smith",
-    role: "CFO, TechCorp Inc.",
+    title: "Fintech Solutions",
+    description: "Enabling financial inclusion through branchless banking and innovative financial technologies that bring banking services directly to underserved communities.",
+    icon: CreditCard,
   },
   {
-    quote: "The digital transformation journey with NEXIRAI has been remarkable. Our productivity has increased significantly.",
-    author: "Sarah Johnson",
-    role: "CTO, Innovation Labs",
+    title: "Micro-ERP Solutions",
+    description: "Streamlined enterprise resource planning solutions designed specifically for SMEs, offering essential features without unnecessary complexity.",
+    icon: Building2,
   },
   {
-    quote: "Their Micro ERP solution perfectly fits our business needs, providing the right balance of features and simplicity.",
-    author: "Michael Chen",
-    role: "CEO, GrowthTech",
-  },
-];
-
-const news = [
-  {
-    category: "Innovation",
-    title: "Revolutionizing Financial Inclusion",
-    description: "NEXIRAI introduces new AI-powered solutions for alternative credit scoring.",
-    link: "/news/financial-inclusion",
-  },
-  {
-    category: "Technology",
-    title: "Smart ERP Evolution",
-    description: "Launch of next-generation Micro ERP applications with enhanced AI capabilities.",
-    link: "/news/smart-erp",
-  },
-  {
-    category: "Business",
-    title: "Digital Transformation Success",
-    description: "Case study: How NEXIRAI helped transform a traditional business into a digital leader.",
-    link: "/news/transformation",
+    title: "Energy Management",
+    description: "Comprehensive energy monitoring and optimization solutions that help organizations reduce costs and meet sustainability goals through smart analytics.",
+    icon: Zap,
   },
 ];
 
