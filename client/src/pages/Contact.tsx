@@ -101,7 +101,7 @@ const Contact = () => {
                 </div>
 
                 {/* USA Office */}
-                <div className="mt-3">
+                <div className="mt-6">
                   <h3 className="text-xl font-medium mb-1">USA Office</h3>
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
