@@ -16,7 +16,7 @@ import {
 const Home = () => {
   return (
     <>
-      {/* Bold Hero Section with Background Image */}
+      {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-32">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -24,7 +24,7 @@ const Home = () => {
             backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')",
           }}
         />
-        <div className="absolute inset-0 bg-black/60" /> {/* Darker overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/60" />
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -49,7 +49,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Solutions Grid */}
+      {/* Solutions Grid with hover effects */}
       <section className="py-20">
         <div className="container">
           <motion.h2
@@ -67,11 +67,12 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-lg transition-all relative overflow-hidden">
+                <Card className="h-full hover:shadow-lg transition-all relative overflow-hidden group">
                   <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-10"
+                    className="absolute inset-0 bg-cover bg-center opacity-10 transition-opacity duration-300 group-hover:opacity-20"
                     style={{ backgroundImage: `url(${solution.backgroundImage})` }}
                   />
+                  <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
                   <CardContent className="p-6 relative z-10">
                     <solution.icon className="w-12 h-12 text-[#FF7F50] mb-4" />
                     <h3 className="text-xl font-semibold mb-2">{solution.title}</h3>
@@ -87,7 +88,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Core Services Section with Background */}
+      {/* Core Services Section with hover effects */}
       <section className="py-20 bg-gray-50 relative">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-5"
@@ -107,11 +108,12 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full relative overflow-hidden">
+                <Card className="h-full relative overflow-hidden group">
                   <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-10"
+                    className="absolute inset-0 bg-cover bg-center opacity-10 transition-opacity duration-300 group-hover:opacity-20"
                     style={{ backgroundImage: `url(${service.backgroundImage})` }}
                   />
+                  <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
                   <CardContent className="p-6 relative z-10">
                     <service.icon className="w-8 h-8 text-[#FF7F50] mb-4" />
                     <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
@@ -124,7 +126,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Section with Background */}
+      {/* About Section */}
       <section className="py-20 relative">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-5"
