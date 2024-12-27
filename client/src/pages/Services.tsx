@@ -13,29 +13,20 @@ const Services = () => {
     >
       <div className="container px-4 sm:px-6 lg:px-8">
         {/* Hero Section with Background Image */}
-        <section className="relative text-center mb-20 mt-16 rounded-lg overflow-hidden">
+        <section className="relative text-center mb-20 mt-8 rounded-lg overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: "url('/images/fintech-banner.jpg')",
-              opacity: 0.15,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-            }}
-          />
-          {/* Gradient Overlay */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(to bottom, transparent 60%, white 100%)',
-              pointerEvents: 'none'
             }}
           />
           <div className="relative z-10 py-20">
             <motion.h1
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              className="text-4xl font-bold mb-6"
+              className="text-4xl font-bold mb-6 text-white" // Added text-white for readability
             >
               Our Partner Services
             </motion.h1>
@@ -43,7 +34,7 @@ const Services = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              className="text-xl text-white max-w-3xl mx-auto" // Changed text color to white
             >
               Empowering businesses with innovative solutions across Financial Technology, Enterprise Management, and Energy Systems
             </motion.p>
