@@ -12,23 +12,32 @@ const Services = () => {
       className="min-h-screen py-20"
     >
       <div className="container">
-        {/* Hero Section */}
-        <section className="text-center mb-20">
-          <motion.h1
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className="text-4xl font-bold mb-6"
-          >
-            Our Core Solutions
-          </motion.h1>
-          <motion.p
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
-          >
-            Empowering businesses with innovative solutions across Financial Technology, Enterprise Management, and Energy Systems
-          </motion.p>
+        {/* Hero Section with Background Image */}
+        <section className="relative text-center mb-20 py-16 rounded-lg overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/attached_assets/Fin tech..jpg')",
+              opacity: 0.15
+            }}
+          />
+          <div className="relative z-10">
+            <motion.h1
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              className="text-4xl font-bold mb-6"
+            >
+              Our Partner Services
+            </motion.h1>
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-xl text-gray-600 max-w-3xl mx-auto"
+            >
+              Empowering businesses with innovative solutions across Financial Technology, Enterprise Management, and Energy Systems
+            </motion.p>
+          </div>
         </section>
 
         {/* Services Grid */}
