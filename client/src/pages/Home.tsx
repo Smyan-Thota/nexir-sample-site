@@ -103,6 +103,10 @@ const Home = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <Card className="h-full relative overflow-hidden group">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center opacity-10 transition-opacity duration-300 group-hover:opacity-20"
+                    style={{ backgroundImage: `url(${service.backgroundImage})` }}
+                  />
                   <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
                   <CardContent className="p-6 relative z-10">
                     <service.icon className="w-8 h-8 text-[#FF7F50] mb-4" />
