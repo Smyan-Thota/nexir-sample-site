@@ -15,10 +15,10 @@ const Services = () => {
         {/* Hero Section with Background Image */}
         <section className="relative text-center mb-20 py-16 rounded-lg overflow-hidden">
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url('/attached_assets/Fin tech..jpg')",
-              opacity: 0.15
+              backgroundImage: "url('https://raw.githubusercontent.com/replit/AIVisioTech/main/attached_assets/Fin%20tech..jpg')",
+              opacity: 0.2
             }}
           />
           <div className="relative z-10">
