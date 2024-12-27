@@ -9,21 +9,29 @@ const Services = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen py-20"
+      className="min-h-screen relative"
     >
-      <div className="container">
+      <div className="container px-4 sm:px-6 lg:px-8">
         {/* Hero Section with Background Image */}
-        <section className="relative text-center mb-20 py-16 rounded-lg overflow-hidden">
+        <section className="relative text-center mb-20 mt-16 rounded-lg overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: "url('/images/fintech-banner.jpg')",
-              opacity: 0.2,
+              opacity: 0.15,
               backgroundSize: 'cover',
-              backgroundPosition: 'center'
+              backgroundPosition: 'center',
             }}
           />
-          <div className="relative z-10">
+          {/* Gradient Overlay */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, transparent 60%, white 100%)',
+              pointerEvents: 'none'
+            }}
+          />
+          <div className="relative z-10 py-20">
             <motion.h1
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -43,7 +51,7 @@ const Services = () => {
         </section>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
