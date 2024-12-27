@@ -17,8 +17,10 @@ const Services = () => {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url('https://raw.githubusercontent.com/replit/AIVisioTech/main/attached_assets/Fin%20tech..jpg')",
-              opacity: 0.2
+              backgroundImage: "url('../attached_assets/Fin tech..jpg')",
+              opacity: 0.2,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
             }}
           />
           <div className="relative z-10">
@@ -49,7 +51,7 @@ const Services = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="h-full">
+              <Card className="h-full hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <service.icon className="w-12 h-12 text-[#FF7F50] mb-4" />
                   <CardTitle className="text-2xl">{service.title}</CardTitle>
@@ -61,7 +63,7 @@ const Services = () => {
                       <Badge
                         key={feature}
                         variant="secondary"
-                        className="bg-gray-100"
+                        className="bg-gray-100 hover:bg-gray-200 transition-colors"
                       >
                         {feature}
                       </Badge>
