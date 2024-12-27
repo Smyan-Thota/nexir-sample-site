@@ -22,24 +22,27 @@ const Services = () => {
               backgroundPosition: 'center',
             }}
           />
-          <div className="relative z-10 py-20">
-            <motion.h1
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              className="text-4xl font-bold mb-6 text-white" // Added text-white for readability
-            >
-              Our Partner Services
-            </motion.h1>
+          <div className="relative z-10 flex flex-col justify-between min-h-[400px]">
+            <div className="py-16"></div>
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-xl text-white max-w-3xl mx-auto" // Changed text color to white
+              className="text-xl text-white max-w-3xl mx-auto mb-8"
             >
               Empowering businesses with innovative solutions across Financial Technology, Enterprise Management, and Energy Systems
             </motion.p>
           </div>
         </section>
+
+        {/* Section Title */}
+        <motion.h1
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="text-4xl font-bold mb-12 text-center"
+        >
+          Our Partner Services
+        </motion.h1>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
