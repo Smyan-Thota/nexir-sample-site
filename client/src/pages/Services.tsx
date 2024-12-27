@@ -17,7 +17,7 @@ const Services = () => {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url('../attached_assets/Fin tech..jpg')",
+              backgroundImage: "url('/images/fintech-banner.jpg')",
               opacity: 0.2,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
