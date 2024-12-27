@@ -18,7 +18,7 @@ const Home = () => {
     <>
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-32">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')",
@@ -68,7 +68,7 @@ const Home = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <Card className="h-full hover:shadow-lg transition-all relative overflow-hidden group">
-                  <div 
+                  <div
                     className="absolute inset-0 bg-cover bg-center opacity-10 transition-opacity duration-300 group-hover:opacity-20"
                     style={{ backgroundImage: `url(${solution.backgroundImage})` }}
                   />
@@ -89,14 +89,8 @@ const Home = () => {
       </section>
 
       {/* Core Services Section with hover effects */}
-      <section className="py-20 bg-gray-50 relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-5"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop')",
-          }}
-        />
-        <div className="container relative">
+      <section className="py-20 bg-gray-50">
+        <div className="container">
           <h2 className="text-4xl font-bold text-center mb-16">
             Our Core Services
           </h2>
@@ -109,10 +103,6 @@ const Home = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <Card className="h-full relative overflow-hidden group">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-10 transition-opacity duration-300 group-hover:opacity-20"
-                    style={{ backgroundImage: `url(${service.backgroundImage})` }}
-                  />
                   <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
                   <CardContent className="p-6 relative z-10">
                     <service.icon className="w-8 h-8 text-[#FF7F50] mb-4" />
@@ -127,14 +117,8 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-5"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop')",
-          }}
-        />
-        <div className="container relative">
+      <section className="py-20">
+        <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8">About NexirAI</h2>
             <p className="text-lg text-gray-600 mb-8">
